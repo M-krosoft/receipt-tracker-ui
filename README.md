@@ -13,12 +13,15 @@
    ```
 
 3. Unit tests
+
+   ```bash
    npm run test
    ```
 
-   ```
 4. Lint
+   ```bash
    npm run lint
+   ```
 
 In the output, you'll find options to open the app in a
 
