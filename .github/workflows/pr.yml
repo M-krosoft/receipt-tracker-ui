@@ -1,0 +1,31 @@
+name: 💰 PR Validation
+
+on:
+  pull_request:
+    branches: main
+
+  workflow_dispatch:
+jobs:
+  unit-tests:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20.11.1
+
+      - name: 💿 Install project
+        run: npm ci
+
+      - name: 🔬 Audit npm dependencies
+        run: npm audit
+        continue-on-error: true
+
+      - name: 🖊 esLint
+        shell: bash
+        run: npm run lint
+
+      - name: 🧪 Run unit tests
+        shell: bash
+        run: npm run test
