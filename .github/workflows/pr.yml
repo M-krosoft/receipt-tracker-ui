@@ -28,4 +28,4 @@ jobs:
 
       - name: 🧪 Run unit tests
         shell: bash
-        run: npm run test
+        run: npm run test:ci
