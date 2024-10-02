@@ -1,4 +1,4 @@
-import { useGetTest } from "@/app/api/test/useGetTest";
+import { useGetTest } from "@/app/api/hooks/test/useGetTest";
 import { Link } from "expo-router";
 import { useEffect } from "react";
 import { View, Text, Button } from "react-native";
