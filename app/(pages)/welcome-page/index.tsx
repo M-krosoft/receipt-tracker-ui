@@ -11,6 +11,7 @@ export default function WelcomePage() {
       <Text>{data && data.title}</Text>
       <Text> {isLoading && "Loading"}</Text>
       <Text>{isError && "Error"}</Text>
+      <Text>Hello login to use app</Text>
       <Link href={"/login"}>
         <Button title="Login" />
       </Link>
