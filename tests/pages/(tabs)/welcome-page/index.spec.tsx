@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react-native";
-import WelcomePage from "../../../../app/(tabs)/welcome-page";
+import WelcomePage from "../../../../app/(pages)/welcome-page";
 
 describe("WelcomePage", () => {
   test("should display title", async () => {
