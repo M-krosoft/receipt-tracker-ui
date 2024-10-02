@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react-native";
 import WelcomePage from "../../app/(pages)/welcome-page";
 
-jest.mock("../../../../app/api/hooks/test/useGetTest", () => ({
+jest.mock("../../app/api/hooks/test/useGetTest", () => ({
   useGetTest: () => ({
     data: {
       userId: 1,
