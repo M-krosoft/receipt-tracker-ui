@@ -6,6 +6,8 @@ module.exports = {
       "error",
       {
         endOfLine: "auto",
+        "comma-dangle": "off",
+        trailingComma: "es5",
       },
     ],
     "@typescript-eslint/no-explicit-any": "error",

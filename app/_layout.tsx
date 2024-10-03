@@ -1,10 +1,13 @@
 import { Stack } from "expo-router";
-import "react-native-reanimated";
+import React from "react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 export default function RootLayout() {
   return (
-    <Stack>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-    </Stack>
+    <QueryClientProvider client={new QueryClient()}>
+      <Stack>
+        <Stack.Screen name="(screens)" options={{ headerShown: false }} />
+      </Stack>
+    </QueryClientProvider>
   );
 }
