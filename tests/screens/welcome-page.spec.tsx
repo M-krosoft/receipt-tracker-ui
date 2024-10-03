@@ -1,5 +1,7 @@
 import { render, screen } from "@testing-library/react-native";
 import WelcomePage from "../../app/(screens)/welcome-page";
+import { translate } from "react-i18nify";
+import { when } from "jest-when";
 
 jest.mock("../../app/api/hooks/test/useGetTest", () => ({
   useGetTest: () => ({
@@ -13,6 +15,12 @@ jest.mock("../../app/api/hooks/test/useGetTest", () => ({
     isError: false,
   }),
 }));
+
+jest.mock("react-i18nify");
+
+when(translate)
+  .calledWith("pages.welcomePage.test")
+  .mockReturnValue("Hello login to use app");
 
 describe("WelcomePage", () => {
   test("should display title", async () => {

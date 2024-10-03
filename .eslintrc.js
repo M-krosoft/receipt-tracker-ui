@@ -11,7 +11,6 @@ module.exports = {
       },
     ],
     "@typescript-eslint/no-explicit-any": "error",
-    "no-shadow": "error",
     "no-nested-ternary": "error",
     "no-else-return": "error",
     "no-async-promise-executor": "error",
