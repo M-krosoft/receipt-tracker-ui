@@ -6,7 +6,7 @@ export default function RootLayout() {
   return (
     <QueryClientProvider client={new QueryClient()}>
       <Stack>
-        <Stack.Screen name="(pages)" options={{ headerShown: false }} />
+        <Stack.Screen name="(screens)" options={{ headerShown: false }} />
       </Stack>
     </QueryClientProvider>
   );
