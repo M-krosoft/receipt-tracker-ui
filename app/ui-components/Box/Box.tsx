@@ -1,11 +1,11 @@
 import { PropsWithChildren } from "react";
-import { Theme } from "../../../assets/styles/theme";
 import {
   BoxProps,
   createRestyleComponent,
   createVariant,
   VariantProps,
 } from "@shopify/restyle";
+import { Theme } from "@assets/styles/theme";
 
 type Props = PropsWithChildren<
   BoxProps<Theme> & VariantProps<Theme, "cardVariants">

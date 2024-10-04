@@ -1,10 +1,10 @@
-import { useGetTest } from "@/app/api/hooks/test/useGetTest";
-import { Text } from "@/app/ui-components/Text/Text";
+import { useGetTest } from "@api/hooks/test/useGetTest";
+import { Box } from "@ui-components/Box/Box";
+import { Text } from "@ui-components/Text/Text";
 import { Link } from "expo-router";
 import { useEffect } from "react";
 import { translate } from "react-i18nify";
 import { View, Button } from "react-native";
-import { Box } from "@/app/ui-components/Box/Box";
 
 export default function WelcomePage() {
   const { data, isLoading, isError } = useGetTest();

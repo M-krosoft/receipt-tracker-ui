@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react-native";
-import WelcomePage from "../../app/(screens)/welcome-page";
 import { translate } from "react-i18nify";
 import { when } from "jest-when";
 import { ThemeProvider } from "@shopify/restyle";
-import theme from "../../assets/styles/theme";
+import theme from "@assets/styles/theme";
+import WelcomePage from "@screens/welcome-page";
 
 jest.mock("../../app/api/hooks/test/useGetTest", () => ({
   useGetTest: () => ({

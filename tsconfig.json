@@ -3,15 +3,14 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@ui-components/*": ["./app/ui-components/*"],
+      "@screens/*": ["./app/(screens)/*"],
+      "@assets/*": ["./assets/*"],
+      "@store/*": ["./app/store/*"],
+      "@api/*": ["./app/api/*"],
+      "@utils/*": ["./app/utils/*"],
+      "@/*": ["./*"]
     }
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
-  ]
+  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"]
 }

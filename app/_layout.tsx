@@ -1,9 +1,9 @@
 import { Stack } from "expo-router";
 import React from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { initializeTranslations } from "../assets/translations/initializeTranslations";
-import theme from "../assets/styles/theme";
 import { ThemeProvider } from "@shopify/restyle";
+import { initializeTranslations } from "@assets/translations/initializeTranslations";
+import theme from "@assets/styles/theme";
 
 export default function RootLayout() {
   initializeTranslations();
