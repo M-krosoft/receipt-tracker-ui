@@ -2,6 +2,8 @@ import { render, screen } from "@testing-library/react-native";
 import WelcomePage from "../../app/(screens)/welcome-page";
 import { translate } from "react-i18nify";
 import { when } from "jest-when";
+import { ThemeProvider } from "@shopify/restyle";
+import theme from "../../assets/styles/theme";
 
 jest.mock("../../app/api/hooks/test/useGetTest", () => ({
   useGetTest: () => ({
@@ -25,9 +27,13 @@ when(translate)
 describe("WelcomePage", () => {
   test("should display title", async () => {
     // Given
-    await render(<WelcomePage />);
+    await render(
+      <ThemeProvider theme={theme}>
+        <WelcomePage />
+      </ThemeProvider>
+    );
 
     // When, Then
-    screen.getByText("Hello login to use app");
+    screen.getAllByText("Hello login to use app");
   });
 });
