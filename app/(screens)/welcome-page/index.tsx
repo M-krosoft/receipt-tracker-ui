@@ -1,6 +1,7 @@
 import { useGetTest } from "@/app/api/hooks/test/useGetTest";
 import { Link } from "expo-router";
 import { useEffect } from "react";
+import { translate } from "react-i18nify";
 import { View, Text, Button } from "react-native";
 
 export default function WelcomePage() {
@@ -11,7 +12,8 @@ export default function WelcomePage() {
       <Text>{data && data.title}</Text>
       <Text> {isLoading && "Loading"}</Text>
       <Text>{isError && "Error"}</Text>
-      <Text>Hello login to use app</Text>
+      <Text> {translate("pages.welcomePage.test")} </Text>
+
       <Link href={"/login"}>
         <Button title="Login" />
       </Link>
