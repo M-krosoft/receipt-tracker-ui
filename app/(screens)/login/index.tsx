@@ -1,12 +1,16 @@
-import { Link } from "expo-router";
-import { View, Button } from "react-native";
+import { router } from "expo-router";
+import { Button } from "react-native";
+import { Box } from "@ui-components/Box/Box";
 
 export default function Login() {
   return (
-    <View>
-      <Link href={"/home"}>
-        <Button title="Login"></Button>
-      </Link>
-    </View>
+    <Box variant="screenContainer">
+      <Button
+        onPress={() => {
+          router.push("/home");
+        }}
+        title="Login"
+      ></Button>
+    </Box>
   );
 }

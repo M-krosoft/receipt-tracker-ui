@@ -1,9 +1,9 @@
 import { setLocale, setTranslations } from "react-i18nify";
-import { polishTranslations } from "./pl";
-import { englishTranslations } from "./en";
-import { Languages } from "@/app/utils/enums/languages.enum";
 import { Platform } from "react-native";
 import { getLocales } from "expo-localization";
+import { Languages } from "@utils/enums/languages.enum";
+import { polishTranslations } from "@assets/translations/pl";
+import { englishTranslations } from "@assets/translations/en";
 
 export const initializeTranslations = (): void => {
   const translations = {

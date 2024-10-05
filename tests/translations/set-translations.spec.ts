@@ -1,8 +1,8 @@
-import { initializeTranslations } from "@/assets/translations/initializeTranslations";
 import { Platform } from "react-native";
 import { setLocale, setTranslations } from "react-i18nify";
 import { getLocales, Locale } from "expo-localization";
 import { when } from "jest-when";
+import { initializeTranslations } from "@assets/translations/initializeTranslations";
 
 jest.mock("react-i18nify");
 jest.mock("expo-localization");
