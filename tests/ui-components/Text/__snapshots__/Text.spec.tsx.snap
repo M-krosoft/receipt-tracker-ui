@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text should render text with correct styles 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+        "textAlign": "center",
+      },
+    ]
+  }
+>
+  Login
+</Text>
+`;

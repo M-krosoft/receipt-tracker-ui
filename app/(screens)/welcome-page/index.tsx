@@ -1,16 +1,16 @@
 import { useGetTest } from "@api/hooks/test/useGetTest";
 import { Box } from "@ui-components/Box/Box";
+import { Button } from "@ui-components/Button/Button";
 import { Text } from "@ui-components/Text/Text";
 import { router } from "expo-router";
 import { useEffect } from "react";
 import { translate } from "react-i18nify";
-import { View, Button } from "react-native";
 
 export default function WelcomePage() {
   const { data, isLoading, isError } = useGetTest();
   useEffect(() => {}, [data]);
   return (
-    <View>
+    <Box>
       <Text>{data && data.title}</Text>
       <Text> {isLoading && "Loading"}</Text>
       <Text>{isError && "Error"}</Text>
@@ -37,11 +37,24 @@ export default function WelcomePage() {
       </Box>
 
       <Button
+        width={"50%"}
+        margin="auto"
+        variant="buttonSecondary"
         onPress={() => {
           router.push("/login");
         }}
-        title="Login"
+        label="Login"
       />
-    </View>
+
+      <Button
+        width={"50%"}
+        margin="auto"
+        variant="buttonPrimary"
+        onPress={() => {
+          router.push("/login");
+        }}
+        label="Login"
+      />
+    </Box>
   );
 }
