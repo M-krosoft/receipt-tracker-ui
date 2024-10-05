@@ -9,12 +9,12 @@ module.exports = {
       alias: {
         map: [
           ["@", "./src"],
-          ["@ui-components", "./src/app/ui-components"],
+          ["@ui-components", "./src/ui-components"],
           ["@screens", "./src/app/(screens)"],
           ["@assets", "./assets"],
-          ["@store", "./src/app/store"],
-          ["@api", "./src/app/api"],
-          ["@utils", "./src/app/utils"],
+          ["@store", "./src/store"],
+          ["@api", "./src/api"],
+          ["@utils", "./src/utils"],
         ],
         extensions: [".ts", ".js", ".json"],
       },

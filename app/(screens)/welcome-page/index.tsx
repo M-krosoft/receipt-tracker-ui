@@ -1,7 +1,7 @@
 import { useGetTest } from "@api/hooks/test/useGetTest";
 import { Box } from "@ui-components/Box/Box";
 import { Text } from "@ui-components/Text/Text";
-import { Link } from "expo-router";
+import { router } from "expo-router";
 import { useEffect } from "react";
 import { translate } from "react-i18nify";
 import { View, Button } from "react-native";
@@ -36,9 +36,12 @@ export default function WelcomePage() {
         </Box>
       </Box>
 
-      <Link href={"/login"}>
-        <Button title="Login" />
-      </Link>
+      <Button
+        onPress={() => {
+          router.push("/login");
+        }}
+        title="Login"
+      />
     </View>
   );
 }

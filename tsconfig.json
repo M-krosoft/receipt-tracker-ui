@@ -3,12 +3,12 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "@ui-components/*": ["./app/ui-components/*"],
+      "@ui-components/*": ["./ui-components/*"],
       "@screens/*": ["./app/(screens)/*"],
       "@assets/*": ["./assets/*"],
-      "@store/*": ["./app/store/*"],
-      "@api/*": ["./app/api/*"],
-      "@utils/*": ["./app/utils/*"],
+      "@store/*": ["./store/*"],
+      "@api/*": ["./api/*"],
+      "@utils/*": ["./utils/*"],
       "@/*": ["./*"]
     }
   },
