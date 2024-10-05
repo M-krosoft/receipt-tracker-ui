@@ -5,7 +5,7 @@ import { ThemeProvider } from "@shopify/restyle";
 import theme from "@assets/styles/theme";
 import WelcomePage from "@screens/welcome-page";
 
-jest.mock("../../app/api/hooks/test/useGetTest", () => ({
+jest.mock("@api/hooks/test/useGetTest", () => ({
   useGetTest: () => ({
     data: {
       userId: 1,
