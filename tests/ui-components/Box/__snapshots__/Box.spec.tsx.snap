@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Box should render box with correct styles 1`] = `
+<View
+  margin="m"
+  style={
+    [
+      {
+        "padding": 8,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 34,
+          "fontWeight": "bold",
+        },
+      ]
+    }
+  >
+    Login
+  </Text>
+</View>
+`;

@@ -9,6 +9,7 @@
     "web": "expo start --web",
     "test": "jest --watchAll",
     "test:ci": "jest --ci",
+    "test:snapshot": "jest --updateSnapshot",
     "lint": "expo lint",
     "lint:fix": "eslint --fix --ext .ts,.tsx ."
   },
