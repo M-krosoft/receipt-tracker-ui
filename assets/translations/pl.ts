@@ -4,7 +4,7 @@ export const polishTranslations = {
       title: "Zarządzaj swoimi wydatkami teraz!",
       registerButton: "Zarejestruj się",
       loginButton: "Zaloguj się",
-      accountInfo: "Posiadasz juz konto?",
+      accountInfo: "Nie masz konta?",
     },
   },
 };
