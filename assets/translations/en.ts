@@ -4,7 +4,7 @@ export const englishTranslations = {
       title: "Manage your expenses right now!",
       registerButton: "Register",
       loginButton: "Login",
-      accountInfo: "Do not have an account?",
+      accountInfo: "Don't have an account?",
     },
   },
 };
