@@ -2,7 +2,6 @@
 
 exports[`Button should render button with correct styles 1`] = `
 <View
-  accessibilityRole="button"
   accessibilityState={
     {
       "busy": undefined,
@@ -42,7 +41,7 @@ exports[`Button should render button with correct styles 1`] = `
         {},
         [
           {
-            "backgroundColor": "#F0F2F3",
+            "backgroundColor": "#F28157",
             "borderRadius": 8,
           },
           [
@@ -56,14 +55,13 @@ exports[`Button should render button with correct styles 1`] = `
       style={
         [
           {
-            "borderColor": "#5A31F4",
+            "backgroundColor": "#00000000",
             "borderRadius": 8,
-            "borderStyle": "solid",
-            "borderWidth": 1,
-            "color": "#5A31F4",
+            "color": "#fffafa",
             "fontSize": 18,
             "fontWeight": "bold",
-            "padding": 8,
+            "paddingHorizontal": 16,
+            "paddingVertical": 8,
             "textAlign": "center",
           },
         ]

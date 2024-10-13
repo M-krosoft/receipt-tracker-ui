@@ -2,10 +2,10 @@
 
 exports[`Box should render box with correct styles 1`] = `
 <View
-  margin="m"
   style={
     [
       {
+        "margin": 16,
         "padding": 8,
       },
     ]
