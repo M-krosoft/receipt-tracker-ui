@@ -3,6 +3,7 @@ import {
   BoxProps,
   createRestyleComponent,
   createVariant,
+  spacing,
   VariantProps,
 } from "@shopify/restyle";
 import { Theme } from "@assets/styles/theme";
@@ -12,5 +13,6 @@ type Props = PropsWithChildren<
 >;
 
 export const Box = createRestyleComponent<Props, Theme>([
+  spacing,
   createVariant({ themeKey: "cardVariants" }),
 ]);

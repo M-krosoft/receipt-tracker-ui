@@ -1,60 +1,70 @@
-import { useGetTest } from "@api/hooks/test/useGetTest";
 import { Box } from "@ui-components/Box/Box";
-import { Button } from "@ui-components/Button/Button";
 import { Text } from "@ui-components/Text/Text";
-import { router } from "expo-router";
-import { useEffect } from "react";
+import { Image } from "react-native";
+import { Button } from "@ui-components/Buttons/Button/Button";
+import { TextButton } from "@ui-components/Buttons/TextButton/TextButton";
 import { translate } from "react-i18nify";
+import { router } from "expo-router";
 
 export default function WelcomePage() {
-  const { data, isLoading, isError } = useGetTest();
-  useEffect(() => {}, [data]);
   return (
-    <Box>
-      <Text>{data && data.title}</Text>
-      <Text> {isLoading && "Loading"}</Text>
-      <Text>{isError && "Error"}</Text>
-
-      <Box variant="screenContainer">
-        <Box variant="section">
-          <Text color="successMessage" variant="header1">
-            {translate("pages.welcomePage.test")}
+    <Box flex={1}>
+      <Box
+        flexDirection="column"
+        justifyContent="space-between"
+        flex={1}
+        alignItems="center"
+        paddingHorizontal="xl"
+        paddingVertical="xxl"
+      >
+        <Box
+          flexDirection="column"
+          gap="xxl"
+          marginTop="xxl"
+          alignItems="center"
+        >
+          <Text textAlign="center" variant="header2" color="textPrimary">
+            {translate("pages.welcomePage.title")}
           </Text>
-          <Text color="errorMessage" variant="body1">
-            {translate("pages.welcomePage.test")}
-          </Text>
+          <Box marginTop="xxl">
+            <Image
+              style={{ width: 200, height: 200 }}
+              resizeMode="contain"
+              source={require("@assets/img/logo.png")}
+            />
+          </Box>
         </Box>
-
-        <Box variant="card">
-          <Text variant="header2"> {translate("pages.welcomePage.test")} </Text>
-          <Text variant="body2"> {translate("pages.welcomePage.test")} </Text>
-        </Box>
-
-        <Box>
-          <Text variant="header3"> {translate("pages.welcomePage.test")} </Text>
-          <Text variant="body3"> {translate("pages.welcomePage.test")} </Text>
+        <Box width={"100%"} flexDirection="column" gap="l">
+          <Box>
+            <Button
+              width={"100%"}
+              label={translate("pages.welcomePage.loginButton")}
+              fontSize={24}
+              variant="buttonPrimary"
+              onPress={() => {
+                router.push({ pathname: "/auth", params: { tab: "Login" } });
+              }}
+            />
+          </Box>
+          <Box
+            flexDirection="row"
+            alignItems="center"
+            justifyContent="center"
+            gap="s"
+          >
+            <Text color="textPrimary">
+              {translate("pages.welcomePage.accountInfo")}
+            </Text>
+            <TextButton
+              label={translate("pages.welcomePage.registerButton")}
+              onPress={() => {
+                router.push({ pathname: "/auth", params: { tab: "register" } });
+              }}
+              color="textAccent"
+            />
+          </Box>
         </Box>
       </Box>
-
-      <Button
-        width={"50%"}
-        margin="auto"
-        variant="buttonSecondary"
-        onPress={() => {
-          router.push("/login");
-        }}
-        label="Login"
-      />
-
-      <Button
-        width={"50%"}
-        margin="auto"
-        variant="buttonPrimary"
-        onPress={() => {
-          router.push("/login");
-        }}
-        label="Login"
-      />
     </Box>
   );
 }

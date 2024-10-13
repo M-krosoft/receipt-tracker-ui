@@ -1,19 +1,14 @@
+import { TextButton } from "@ui-components/Buttons/TextButton/TextButton";
 import theme from "@assets/styles/theme";
 import { ThemeProvider } from "@shopify/restyle";
 import { fireEvent, render } from "@testing-library/react-native";
-import { Button } from "@ui-components/Button/Button";
 
-describe("Button", () => {
-  test("should render button with correct styles", async () => {
+describe("TextButton", () => {
+  test("should render text button with correct styles", async () => {
     // When
     const renderedComponent = await render(
       <ThemeProvider theme={theme}>
-        <Button
-          onPress={jest.fn()}
-          label="Login"
-          fontSize={18}
-          variant="buttonPrimary"
-        />
+        <TextButton onPress={jest.fn()} label="Login" fontSize={18} />
       </ThemeProvider>
     );
 
@@ -21,12 +16,12 @@ describe("Button", () => {
     expect(renderedComponent.toJSON()).toMatchSnapshot();
   });
 
-  test("should call onPress when button is pressed", async () => {
+  test("should call onPress when text button is pressed", async () => {
     // Given
     const onPress = jest.fn();
     const renderedComponent = await render(
       <ThemeProvider theme={theme}>
-        <Button onPress={onPress} label="Login" />
+        <TextButton onPress={onPress} label="Login" />
       </ThemeProvider>
     );
 

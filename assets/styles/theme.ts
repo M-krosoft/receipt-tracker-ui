@@ -1,31 +1,30 @@
 import { createTheme } from "@shopify/restyle";
 
 const palette = {
-  purpleLight: "#8C6FF7",
-  purplePrimary: "#5A31F4",
-  purpleDark: "#3F22AB",
-
-  greenLight: "#56DCBA",
-  greenPrimary: "#0ECD9D",
-  greenDark: "#0A906E",
-
-  black: "#0B0B0B",
-  white: "#F0F2F3",
-  red: "#EB5757",
+  darkBlue: "#253659",
+  cyan: "#03A696",
+  lightCyan: "#04BF9D",
+  orange: "#F28157",
+  darkOrange: "#BF665E",
+  white: "#fffafa",
+  transparent: "#00000000",
 };
 
 const theme = createTheme({
   colors: {
-    mainBackground: palette.white,
-    cardPrimaryBackground: palette.purplePrimary,
-    errorMessage: palette.red,
-    successMessage: palette.greenPrimary,
+    mainBackgroundGradientFirst: palette.lightCyan,
+    mainBackgroundGradientSecond: palette.cyan,
 
-    buttonPrimary: palette.purplePrimary,
-    buttonPrimaryForeground: palette.white,
+    textPrimary: palette.white,
+    textAccent: palette.orange,
+
+    transparent: palette.transparent,
+
+    buttonPrimary: palette.white,
+    buttonPrimaryForeground: palette.orange,
 
     buttonSecondary: palette.white,
-    buttonSecondaryForeground: palette.purplePrimary,
+    buttonSecondaryForeground: palette.darkOrange,
   },
   spacing: {
     auto: "auto",
@@ -34,6 +33,8 @@ const theme = createTheme({
     m: 16,
     l: 24,
     xl: 40,
+    xxl: 56,
+    xxxl: 64,
   },
   borderRadii: {
     xs: 2,
@@ -66,21 +67,21 @@ const theme = createTheme({
       fontSize: 12,
     },
     buttonPrimary: {
-      borderWidth: 1,
-      borderColor: "buttonPrimary",
-      borderStyle: "solid",
+      backgroundColor: "transparent",
       fontWeight: "bold",
-      fontSize: 16,
+      borderRadius: "m",
+      color: "buttonPrimary",
+      paddingHorizontal: "m",
+      paddingVertical: "s",
+    },
+    buttonSecondary: {
+      fontWeight: "bold",
       borderRadius: "m",
       color: "buttonPrimary",
       padding: "s",
     },
-    buttonSecondary: {
+    buttonText: {
       fontWeight: "bold",
-      fontSize: 16,
-      color: "buttonSecondary",
-      padding: "s",
-      borderRadius: "m",
     },
     defaults: {},
   },
@@ -109,6 +110,7 @@ const theme = createTheme({
       borderRadius: "m",
       backgroundColor: "buttonSecondaryForeground",
     },
+    buttonText: {},
     defaults: {},
   },
 });

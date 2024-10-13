@@ -34,7 +34,7 @@ export const Button = ({ onPress, label, fontSize, ...rest }: Props) => {
   const props = useRestyle(restyleBoxFunctions, rest);
 
   return (
-    <TouchableOpacity onPress={onPress} accessibilityRole={"button"}>
+    <TouchableOpacity onPress={onPress} role={"button"} activeOpacity={0.9}>
       <ButtonContainer {...props}>
         <Text textAlign="center" fontSize={fontSize} variant={props.variant}>
           {label}
