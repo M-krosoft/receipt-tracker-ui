@@ -24,7 +24,11 @@ export default function Auth() {
       {authData.error && <Text>Error</Text>}
       <Button
         onPress={() =>
-          registerUser({ email: "test1111@test.com", password: "Tester1!" })
+          registerUser({
+            name: "Tester",
+            email: "test1111@test.com",
+            password: "Tester1!",
+          })
         }
         label="Register"
       ></Button>

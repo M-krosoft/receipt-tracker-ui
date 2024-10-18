@@ -7,6 +7,7 @@ import { when } from "jest-when";
 import { useAuth } from "@api/hooks/authentication/useAuth";
 import { LoginData } from "@/features/authentication/interfaces/login-data.interface";
 import * as SecureStore from "expo-secure-store";
+import { RegisterData } from "@/features/authentication/interfaces/register-data.interface";
 
 jest.mock("@/api/hooks/authentication/useAuth");
 jest.mock("expo-secure-store");
@@ -98,7 +99,8 @@ describe("AuthPage", () => {
 
   test("should register user if request is successful", async () => {
     // Given
-    const registerData = {
+    const registerData: RegisterData = {
+      name: "Tester",
       email: "test1111@test.com",
       password: "Tester1!",
     };
@@ -133,7 +135,8 @@ describe("AuthPage", () => {
 
   test("should throw error if register request fails", async () => {
     // Given
-    const registerData = {
+    const registerData: RegisterData = {
+      name: "Tester",
       email: "test1111@test.com",
       password: "Tester1!",
     };
