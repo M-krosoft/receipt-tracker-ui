@@ -28,7 +28,10 @@ export default function WelcomePage() {
           </Text>
           <Box marginTop="xxl">
             <Image
-              style={{ width: 200, height: 200 }}
+              style={{
+                width: 200,
+                height: 200,
+              }}
               resizeMode="contain"
               source={require("@assets/img/logo.png")}
             />
